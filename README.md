@@ -1,7 +1,12 @@
-# aws-s3-security-baseline-checker
-“Read-only Python/Boto3 checks for one S3 bucket’s baseline security settings.
+# aws-s3-security-audit
+
+Read-only Python/Boto3 checks for one S3 bucket's baseline security settings.
+
+## Sample output
+
+```json
 {
-  "bucket": "aws-s3-security-baseline-checker",
+  "bucket": "lab-bucket-redacted",
   "scope": "One bucket; read-only checks",
   "checks": {
     "public_access_block": {
@@ -23,9 +28,7 @@
     },
     "encryption": {
       "status": "PASS",
-      "algorithms": [
-        "AES256"
-      ]
+      "algorithms": ["AES256"]
     },
     "versioning": {
       "status": "PASS",
